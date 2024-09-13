@@ -1,0 +1,2 @@
+"A company has deployed a simple web tool that allows employees to check the network status by pinging any server. However, the input validation is weak, leading to a potential command injection vulnerability. Your goal is to exploit this vulnerability and retrieve the hidden flag." 
+The goal was to inject a command via the web form to read a file (flag.txt) stored on the server. 

@@ -1,0 +1,19 @@
+Setup and Environment:
+Platform: Ubuntu
+Web server: Apache
+
+Web application: A simple webform that takes user input to ping a specified IP address. 
+
+
+Install Apache web server: sudo apt install apache2 -y
+
+Install PHP: sudo apt install php libapache2-mod-php -y
+
+Web application: Copy and paste the "index.php" file in the '/var/www/html/ping_tool' directory after creating the directory. 
+
+configure the ownership and permission by running the command. 
+sudo chown -R www-data:www-data /path/to/challenge
+sudo chmod -R 755 /path/to/challenge
+
+
+paste the flag.txt file in the /var/www/flag/ directory after making the directory. 

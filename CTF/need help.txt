@@ -1,0 +1,10 @@
+Change the ownership:: sudo chown -R www-data:www-data /var/www/html/ping_tool
+
+set permission: sudo chmod -R 755 /var/www/html/ping_tool
+
+keep the Apache server running: sudo systemctl restart apache2
+
+access the url using the virtual machine ip address eg: http://ip address.
+
+
+To exploit: 8.8.8.8; cat /var/www/flag/flag.txt.
