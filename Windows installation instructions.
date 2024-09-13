@@ -1,0 +1,45 @@
+To install Windows on VirtualBox, follow these steps:
+
+1. Download Windows ISO:
+Go to https://www.microsoft.com/software-download/.
+Download the Windows ISO file for the version you wish to install.
+2. Create a New Virtual Machine:
+Open VirtualBox.
+Click on "New" to create a new virtual machine.
+Enter a name (e.g., "Windows 10") and select "Windows" as the type and the appropriate version (e.g., "Windows 10 (64-bit)").
+Click "Next."
+3. Allocate Memory:
+Choose the amount of RAM to allocate to the virtual machine (e.g., 4096 MB or more depending on your system resources).
+Click "Next."
+4. Create a Virtual Hard Disk:
+Select "Create a virtual hard disk now" and click "Create."
+Choose the hard disk file type (e.g., VDI - VirtualBox Disk Image) and click "Next."
+Select "Dynamically allocated" or "Fixed size" based on your preference, then click "Next."
+Set the size of the virtual hard disk (e.g., 50 GB or more), then click "Create."
+5. Configure Virtual Machine:
+Select the newly created VM and click "Settings."
+Go to "System" and adjust the boot order to ensure "Optical" is at the top if you're using an ISO.
+Go to "Storage," click on the empty optical drive under "Controller: IDE," and then click on the disk icon next to "Optical Drive."
+Choose "Choose a disk file" and select the downloaded Windows ISO.
+Click "OK" to close the settings.
+6. Start the Virtual Machine:
+Select the VM and click "Start."
+The VM will boot from the Windows ISO.
+7. Install Windows:
+Once Windows starts, you'll be presented with the installation screen.
+Select your language, time, and keyboard preferences, then click "Next."
+Click "Install now."
+8. Enter Product Key:
+If prompted, enter your Windows product key. If you don’t have one, you can choose "I don’t have a product key" and continue (you’ll need to activate Windows later).
+9. Select Installation Type:
+Choose "Custom: Install Windows only (advanced)" if you want a clean installation.
+10. Partition the Virtual Disk:
+Select the partition where you want to install Windows (usually the only option). Click "Next."
+11. Complete Installation:
+Windows will begin copying files and installing. This may take some time and the VM will restart several times during the process.
+12. Set Up Windows:
+Follow the on-screen prompts to set up Windows (create a user account, set a password, configure privacy settings, etc.).
+13. Install VirtualBox Guest Additions (Recommended):
+Once Windows is installed and running, click "Devices" in the VirtualBox menu.
+Select "Insert Guest Additions CD image."
+Follow the prompts inside the Windows VM to install the Guest Additions for better performance and additional features.
