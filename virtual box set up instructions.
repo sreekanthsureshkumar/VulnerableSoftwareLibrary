@@ -1,0 +1,32 @@
+Download VirtualBox:
+
+Go to the https://www.virtualbox.org/.
+Click on "Downloads" and select the appropriate version for your operating system (Windows, macOS, Linux, etc.).
+Run the Installer:
+
+Open the downloaded installer file.
+Follow the prompts in the installation wizard.
+Install VirtualBox:
+
+Accept the license agreement.
+Choose the installation location (default is usually fine).
+Select additional features (e.g., shortcuts) if needed.
+Click "Install" to begin the installation process.
+Network Configuration:
+
+During installation, you might be prompted to install network features (VirtualBox Networking). Click "Yes" to allow this.
+Complete Installation:
+
+Once the installation is finished, click "Finish" to exit the installer.
+Launch VirtualBox:
+
+Open VirtualBox from the Start menu (Windows) or Applications folder (macOS).
+Update VirtualBox (Optional):
+
+After installation, check for updates in the VirtualBox menu to ensure you have the latest version.
+Install Extension Pack (Optional):
+
+Download the VirtualBox Extension Pack from the same download page.
+Open VirtualBox, go to "File" > "Preferences" > "Extensions".
+Click the "Add" button and select the downloaded Extension Pack file.
+Follow the prompts to install it.
